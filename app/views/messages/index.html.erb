@@ -1,18 +1,84 @@
-<div class="col-md-12">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <td>#</td>
-        <td>Title</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @messages.each do |message| %>
-        <tr>
-          <td>#</td>
-          <td><%= link_to(message.title, message_path(message)) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://ooo.0o0.ooo/2017/05/22/59228f3476179.png" alt="banner1.png" title="banner1.png" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>大德天成</h3>
+          <p>大德天成</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://ooo.0o0.ooo/2017/05/22/59228f3476179.png" alt="banner1.png" title="banner1.png" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>大德天成</h3>
+          <p>大德天成</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://ooo.0o0.ooo/2017/05/22/59228f3476179.png" alt="banner1.png" title="banner1.png" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>大德天成</h3>
+          <p>大德天成</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3 ">
+      <div class="well msgsidebar">
+        <button type="button" class="btn btn-danger btn-block">新闻中心</button>
+        <br><br>
+        <img src="https://ooo.0o0.ooo/2017/05/22/5922986e27d54.png" alt="Snip20170522_2.png" title="Snip20170522_2.png" class="img-responsive" />
+        <br>
+        <img src="https://ooo.0o0.ooo/2017/05/22/5922988f72578.png" alt="Snip20170522_1.png" title="Snip20170522_1.png" class="img-responsive" />
+        <br><br><br><br><br><br>
+      </div>
+    </div>
+
+    <div class="col-sm-7 msgcontent">
+
+      <div class="newscenter"> <strong>|</strong>  &nbsp;&nbsp;&nbsp;&nbsp;新闻中心 </div>
+
+      <br><br>
+
+        <!-- catalogue news start -->
+        <div class="cataloguenews">
+          <% @messages.each do |message| %>
+              <small><span class="glyphicon glyphicon-triangle-right"></span></small>
+              <%= link_to(message.title, message_path(message)) %><br>
+          <% end %>
+        </div>
+        <!-- catalogue news finish -->
+      </div>
+
+      </div>
+
+      <div class="col-sm-1"></div>
+
+    </div>
 </div>

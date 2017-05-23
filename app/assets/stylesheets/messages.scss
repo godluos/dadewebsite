@@ -1,3 +1,32 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.carousel-inner img {
+    // -webkit-filter: grayscale(90%);
+    // filter: grayscale(90%); /* make all photos black and white */
+    width: 90%; /* Set width to 100% */
+    margin: auto;
+  }
+
+.msgsidebar {
+  margin-top: 15px;
+  height: max;
+
+}
+
+.msgcontent {
+  margin-top: 15px;
+}
+
+.newscenter {
+  padding: 10px;
+  padding-left: 40px;
+  background-color: #EEEEEE;
+  color: #C71717;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cataloguenews {
+  padding-left: 25px;
+}
