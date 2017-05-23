@@ -17,3 +17,32 @@
 //= require turbolinks
 //= require_tree .
 //= require kindeditor
+
+//-----------go to top---------
+$(function() {
+    $("#usr_rmenu").each(function() {
+        $(this).find(".btn-top").click(function() {
+            $("html, body").animate({
+                "scroll-top": 0
+            }, 800)
+        })
+    });
+    var lastRmenuStatus = false;
+    $(window).scroll(function() {
+        var _top = $(window).scrollTop();
+        if (_top > 200) {
+            $("#usr_rmenu").data("expanded", true)
+        } else {
+            $("#usr_rmenu").data("expanded", false)
+        }
+        if ($("#usr_rmenu").data("expanded") != lastRmenuStatus) {
+            lastRmenuStatus = $("#usr_rmenu").data("expanded");
+            if (lastRmenuStatus) {
+                $("#usr_rmenu .btn-top").slideDown()
+            } else {
+                $("#usr_rmenu .btn-top").slideUp()
+            }
+        }
+    })
+});
+//-----------go to top end---------
