@@ -1,0 +1,60 @@
+<!-- contact us -->
+<div class="contact_side">
+   <div class="contact">
+      <h4 class="index_h4">CONTACT US<span>联系我们</span></h4>
+      <div class="contact_div">
+         <div class="contact_left">
+            <h2><img src="/images/contact_logo.png" alt="武汉大德天成商贸有限公司" title="武汉大德天成商贸有限公司" /></h2>
+            <ul>
+               <li class="fwrx">服务热线：027-87766622</li>
+               <li>TEL：13871063897</li>
+               <li>FAX：027-876565422</li>
+               <li>QQ：395423039</li>
+               <li>E-MAIL：395423039@qq.com</li>
+               <li>主营：白酒定制</li>
+               <li>地址：武汉市江汉区中央商务区泛海国际SOHO城8栋23层</li>
+            </ul>
+         </div>
+         <div class="contact_right">
+            <h3><span>在线留言</span></h3>
+            <!-- 由于主程给的留言部分代码报错，暂时采用模板代码 -->
+            <form action="/module/form.html" method="post" onsubmit="return checkForm()">
+               <ul>
+               <li><label>姓名：</label><input type="text" name="name" required="" id="username"></li>
+               <li><label>联系方式：</label><input type="text" name="phone" required="" id="telephone"></li>
+               <li><label>邮箱地址：</label><input type="text" name="address" required="" id="address"></li>
+               <li style="height:90px"><label>在线留言：</label><textarea name="content" id="content" required=""></textarea></li>
+               <li><input type="submit" name="submit" value="提交留言"></li>
+               </ul>
+               <input name="check" type="hidden" value="lZlvaZ1gZZual5BqkKuXpJ0=">
+             </form>
+              <script type="text/javascript">
+                  function checkForm() {
+                      var username = $("#username").val();
+                      var telphone = $("#telphone").val();
+                      var address = $("#address").val();
+                      var content = $("#content").val();
+
+                      if (username == '') {
+                          alert('姓名必须填写');
+                          return false;
+                      } else if (telphone == '') {
+                          alert('电话必须填写');
+                          return false;
+                      } else if (address == '') {
+                          alert('地址必须填写');
+                          return false;
+                      } else if (content == '') {
+                          alert('留言内容必须填写');
+                          return false;
+                      } else {
+                          return true;
+                      }
+                  }
+              </script>
+              <!-- 由于主程给的留言部分代码报错，暂时采用模板代码 end -->
+         </div>
+      </div>
+   </div>
+</div>
+<!-- contact us _end -->
