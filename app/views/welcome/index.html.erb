@@ -324,6 +324,7 @@
                   <span class="main-nav__link__text">联系我们</span>
                 </a>
               </li>
+              <ul class="nav navbar-nav navbar-right">
               <% if !current_admin %>
             <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'),
             new_user_session_path) %></li>
@@ -342,6 +343,7 @@
               </ul>
             </li>
           <% end %>
+        </ul>
             </ul>
           </nav>
         </div>
