@@ -1,24 +1,26 @@
-<h2> New message </h2>
+<h4> 新闻编辑后台 > 新增 </h4>
+<hr>
 <%= simple_form_for [:admin, @message] do |f| %>
   <div class="group">
-    <%= f.input :title %>
+    <%= f.input :title, :label => '标题' %>
   </div>
   <div class="group">
     <%= select_tag(:kind_id, options_for_select(@kinds),
-     :prompt => "类别") %>
+   :prompt => "类别") %>
   </div>
   <div class="group">
     <%= f.input :is_hidden %>
   </div>
   <div class="group">
-    <%= f.input :writer %>
+    <%= f.input :writer, :label => '作者' %>
   </div>
   <div class="group">
-    <%= f.input :keyword %>
+    <%= f.input :keyword, :label => '关键字' %>
   </div>
   <div class="group">
-    <%= f.input :description, :as => :kindeditor,
+    <%= f.input :description, :label => '文章内容', :as => :kindeditor,
     :input_html => { :width => 800, :height => 300 } %>
   </div>
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+  <%= f.submit "提交", data: { disable_with: "Submitting..." } %>
 <% end %>
