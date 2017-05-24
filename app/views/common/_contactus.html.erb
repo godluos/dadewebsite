@@ -1,7 +1,7 @@
 <!-- contact us -->
 <div class="contact_side">
    <div class="contact">
-      <h4 class="index_h4">CONTACT US<span>联系我们</span></h4>
+      <h4 class="index_h4"><span>联系我们</span></h4>
       <div class="contact_div">
          <div class="contact_left">
             <h2><img src="/images/contact_logo.png" alt="武汉大德天成商贸有限公司" title="武汉大德天成商贸有限公司" /></h2>
@@ -17,14 +17,32 @@
          </div>
          <div class="contact_right">
             <h3><span>在线留言</span></h3>
-            <!-- 由于主程给的留言部分代码报错，暂时采用模板代码 -->
+
             <form action="/module/form.html" method="post" onsubmit="return checkForm()">
                <ul>
+                 <%= simple_form_for [@comment] do |f| %>
+                   <div class="group">
+                    <label>姓名：</label><%= f.input :name,%>
+                   </div>
+                   <div class="group">
+                     <label>联系方式：</label><%= f.input :tel, label:fals%>
+                   </div>
+                   <div class="group">
+                     <label>邮箱地址：</label><%= f.input :email, label:"邮箱地址：" %>
+                   </div>
+                   <div class="group">
+                     <label>留言内容：</label><%= f.input_field :description, label:"留言内容：" %>
+                   </div>
+                   <%= f.submit "发送", data: { disable_with: "Submitting..." } %>
+                 <% end %>
                <li><label>姓名：</label><input type="text" name="name" required="" id="username"></li>
                <li><label>联系方式：</label><input type="text" name="phone" required="" id="telephone"></li>
                <li><label>邮箱地址：</label><input type="text" name="address" required="" id="address"></li>
                <li style="height:90px"><label>在线留言：</label><textarea name="content" id="content" required=""></textarea></li>
+
+
                <li><input type="submit" name="submit" value="提交留言"></li>
+
                </ul>
                <input name="check" type="hidden" value="lZlvaZ1gZZual5BqkKuXpJ0=">
              </form>
