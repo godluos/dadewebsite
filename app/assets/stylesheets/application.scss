@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 @import "bootstrap-sprockets" ;
 @import "bootstrap" ;
@@ -26,7 +27,7 @@ padding-top: 15%;
 .addpadding{
   padding-top: 150px;
   padding-bottom: 20px;
-  
+
 
 }
 
@@ -434,6 +435,9 @@ a:focus, img:focus, button:focus, .btn:focus {outline: none;}
 ::selection {background-color: #fb5353;color: #fff;text-shadow: none;}
 
 @font-face {font-family: 'Open Sans', sans-serif;}
+
+
+
 // //----------Keep the footer at the bottom---------
 // html {
 //   height: 100%;

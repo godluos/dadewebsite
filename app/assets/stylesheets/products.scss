@@ -1,3 +1,194 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//------------products_index--------
+
+.cpfl {
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.tyyj-gy {
+    background-color: #EEEEEE;
+    box-shadow: 3px 3px 3px #BDBDBD;
+    border-radius: 5px;
+    border: 1px solid #EEEEEE;
+}
+
+.daohang {
+    border-bottom: 1px solid #ddd;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-top: 6px;
+    padding-right: 0;
+    padding-bottom: 6px;
+    padding-left: 50px;
+}
+
+.list_paixu {
+    text-align: left;
+    line-height: 30px;
+    padding-left: 50px;
+    margin: 10px 0px;
+}
+
+.list_paixu dl {
+    border-bottom: 1px dotted #ddd;
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.list_paixu dt {
+    float: left;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    color: #2d2d2d;
+    font-weight: bold;
+    line-height: inherit;
+}
+
+.list_paixu dd {
+    margin-left: 55px;
+    margin: 0;
+    padding: 0;
+}
+
+.list_paixu dd a {
+    font-size: 14px;
+    text-align: center;
+    color: #444;
+    margin-right: 13px;
+    margin-bottom: 2px;
+    padding: 4px;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 20px;
+    color: #222;
+    text-decoration: none;
+}
+
+.list_paixu dd a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #d52218;
+    border-radius: 3px
+}
+
+.list_paixu dd a.on {
+    color: #fff;
+    font-weight: 700;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    background: #d52218;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    border-radius: 3px;
+}
+
+.productslist {
+    margin: 0 60px;
+}
+
+.productslist .thumbnail {
+    border: none;
+    padding-top: 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    box-shadow: 5px 5px 5px #BDBDBD;
+    border-radius: 5px;
+}
+
+.productslist .thumbnail .caption {
+    text-align: center;
+}
+
+.productslist {
+ img {
+   width: 100%; //可使图片随屏幕大小缩放
+   margin: 7.5px auto 7.5px auto;
+ }
+}
+
+.productslist a:hover img {
+  transform: scale(1.2)
+}
+
+.productslist a img {
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+//------------products_index_end--------
+
+
+/*===== Admin-Form 后台表单设置 =====*/
+.admin-panel-title {
+    color: #3D537F;
+    margin-top: 20px;
+}
+
+.admin-data-box {
+  hr {
+    height: 1.5px;
+    background-color: #ccc;
+    margin: 30px 0 30px 0;
+  }
+
+    input {
+    height: 40px;
+  }
+
+  select {
+    height: 35px;
+    min-width: 175px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+
+  /*===== 送出按鈕 =====*/
+  .form-actions{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    .btn {
+      width: 100%;
+      color: #fff;
+      background-color: #4A6BB5;
+      border-color: #4A6BB5;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background-color: #4A99B5;
+      border-color: #4A99B5;
+      color: #fff;
+    }
+  }
+}
+
+//------Admin-Form 后台表单设置 end-----------
+
+// .cptk {
+//   padding: 25px 0 25px 0;
+//   margin: 10px 10px 10px 10px;
+//   background-color: #EEEEEE;
+//   border: 1px solid #EEEEEE;
+//   box-shadow: 3px 3px 3px #BDBDBD;
+//   border-radius: 5px;
+// }
+//
+// img.thumbnail {
+//   padding: 0;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
