@@ -111,6 +111,13 @@
     text-align: center;
 }
 
+.productslist {
+ img {
+   width: 100%; //可使图片随屏幕大小缩放
+   margin: 7.5px auto 7.5px auto;
+ }
+}
+
 .productslist a:hover img {
   transform: scale(1.2)
 }
@@ -121,6 +128,55 @@
 }
 //------------products_index_end--------
 
+
+/*===== Admin-Form 后台表单设置 =====*/
+.admin-panel-title {
+    color: #3D537F;
+    margin-top: 20px;
+}
+
+.admin-data-box {
+  hr {
+    height: 1.5px;
+    background-color: #ccc;
+    margin: 30px 0 30px 0;
+  }
+
+    input {
+    height: 40px;
+  }
+
+  select {
+    height: 35px;
+    min-width: 175px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+
+  /*===== 送出按鈕 =====*/
+  .form-actions{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    .btn {
+      width: 100%;
+      color: #fff;
+      background-color: #4A6BB5;
+      border-color: #4A6BB5;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background-color: #4A99B5;
+      border-color: #4A99B5;
+      color: #fff;
+    }
+  }
+}
+
+//------Admin-Form 后台表单设置 end-----------
 
 // .cptk {
 //   padding: 25px 0 25px 0;
