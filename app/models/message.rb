@@ -1,5 +1,5 @@
 class Message < ApplicationRecord
-  belongs_to :category
+  belongs_to :kind
 
   def publish!
     self.is_hidden = false

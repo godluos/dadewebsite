@@ -21,12 +21,16 @@
       <tbody>
         <% @messages.each do |message| %>
           <tr>
-            <td><%= link_to(message.title, admin_message_path(message)) %></td>
+
+            <td>
+              <%= render_message_status(message) %>
+              <%= link_to(message.title, admin_message_path(message)) %>
+            </td>
             <td>
               <% if message.is_hidden %>
-                <%= link_to("发布", publish_admin_message_path(message) , :method => :post, :class => "btn btn-xs btn-success") %>
+                <%= link_to("显示", publish_admin_message_path(message) , :method => :post, :class => "btn btn-xs btn-success") %>
               <% else %>
-                <%= link_to("隐藏", hide_admin_message_path(message), :method => :post, :class => "btn btn-xs btn-info") %>
+                <%= link_to("隐藏", hide_admin_message_path(message), :method => :post, :class => "btn btn-xs btn-danger") %>
               <% end %>
             </td>
             <td>
@@ -34,8 +38,8 @@
               <%= link_to("Delete", admin_message_path(message),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
             </td>
-            <td>创建日期</td>
-            <td>修改日期</td>
+            <td><%= message.created_at =%></td>
+            <td><%= message.updated_at =%></td>
           </tr>
         <% end %>
       </tbody>

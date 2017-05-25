@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
-    resources :products, :comments
+    resources :comments
+    resources :products do
+      member do
+        post :publish
+        post :hide
+      end
+    end
     resources :messages do
       member do
         post :publish
