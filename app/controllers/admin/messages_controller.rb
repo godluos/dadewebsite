@@ -46,6 +46,18 @@ class Admin::MessagesController < ApplicationController
     redirect_to admin_messages_path
   end
 
+  def publish
+    @message = Message.find(params[:id])
+    @message.publish!
+    redirect_to :back
+  end
+
+  def hide
+    @message = Message.find(params[:id])
+    @message.hide!
+    redirect_to :back
+  end
+
   private
 
     def message_params
