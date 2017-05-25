@@ -62,6 +62,6 @@ class Admin::MessagesController < ApplicationController
 
     def message_params
       params.require(:message).permit(:title, :description,
-      :kind_id, :is_hidden,)
+      :kind_id, :is_hidden, :writer, :keyword)
     end
 end
