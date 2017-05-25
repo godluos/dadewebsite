@@ -6,6 +6,10 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.find(params[:id])
+    if @message.is_hidden
+      flash[:warning] = "无效地址"
+      redirect_to messages_path
+    end
   end
 
   def search
