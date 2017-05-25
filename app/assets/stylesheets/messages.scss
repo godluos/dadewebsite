@@ -30,3 +30,28 @@
 .cataloguenews {
   padding-left: 25px;
 }
+
+.dzl-newsbar {
+  border: solid 1px black;
+}
+
+// newnavbar
+
+
+.dzl-newsbar-relative {
+  position: relative;
+  top: -40px;
+  background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// newnavbar end
+// newscontent
+.dzl-newcontent {
+  padding: 50px;
+}
+// newscontent end
+
+.new-index-title {
+  text-align: center;
+}
