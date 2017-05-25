@@ -111,6 +111,13 @@
     text-align: center;
 }
 
+.productslist {
+ img {
+   width: 100%; //可使图片随屏幕大小缩放
+   margin: 7.5px auto 7.5px auto;
+ }
+}
+
 .productslist a:hover img {
   transform: scale(1.2)
 }
