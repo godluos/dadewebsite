@@ -1,4 +1,9 @@
-<h2> New Product </h2>
+<!--=== 新增商品 ===-->
+<h2 class="admin-panel-title col-md-8 col-md-offset-1"><span class="fa fa-file-text-o"></span> <%= t('新增商品') %></h2>
+<%= render('form') %>
+
+<!-- 原代码 -->
+<!-- <h2> 新增产品 </h2>
 <%= simple_form_for [:admin, @product] do |f| %>
   <div class="group">
     <%= f.input :title %>
@@ -16,4 +21,5 @@
 		 <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
  </div>
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
-<% end %>
+<% end %> -->
+<!-- 原代码 end-->
