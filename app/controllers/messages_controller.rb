@@ -1,7 +1,10 @@
 class MessagesController < ApplicationController
   before_action :validate_search_key, only: [:search]
+  impressionist actions: [:show]
+
   def index
     @messages = Message.where(:is_hidden => false)
+    @messages = @messages.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   def show

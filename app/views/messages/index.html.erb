@@ -2,7 +2,7 @@
 <!-- 大图 -->
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 dzl-banner">
 
 <img src="https://ooo.0o0.ooo/2017/05/25/5926e849eb594.png" class="img-responsive" alt="内页banner copy.png" title="内页banner copy.png" />
 
@@ -41,7 +41,7 @@
       <% @messages.each do |message| %>
             <small><span class="glyphicon glyphicon-triangle-right"></span></small>
             <%= link_to(message.title, message_path(message)) %>
-            <span class="pull-right">发表日期</span><br>
+            <span class="pull-right"><%= message.created_at.localtime.strftime("%Y/%m/%d") %></span><br>
         <% end %>
 
     </div>
@@ -50,6 +50,9 @@
 
   <!-- news index content end -->
 
+  <div class="text-center">
+     <%= will_paginate @messages, :class => "flickr_pagination" %>
+  </div><br><br>
 
 
 </div>
