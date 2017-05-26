@@ -1,33 +1,56 @@
-<div class="row">
-  <div class="col-sm-3 ">
-    <div class="well msgsidebar">
-      <button type="button" class="btn btn-danger btn-block">新闻中心</button>
-      <br>
-      <br>
-      <img src="https://ooo.0o0.ooo/2017/05/22/5922986e27d54.png" alt="Snip20170522_2.png" title="Snip20170522_2.png" class="img-responsive" />
-      <br>
-      <img src="https://ooo.0o0.ooo/2017/05/22/5922988f72578.png" alt="Snip20170522_1.png" title="Snip20170522_1.png" class="img-responsive" />
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="col-sm-9 msgcontent">
-    <div class="newscenter"> <strong>|</strong>  &nbsp;&nbsp;&nbsp;&nbsp;新闻中心 </div>
 
-    <br><br>
+<!-- 大图 -->
 
-      <!-- catalogue news start -->
-      <div class="cataloguenews">
-        <% @messages.each do |message| %>
-            <small><span class="glyphicon glyphicon-triangle-right"></span></small>
-            <%= link_to(message.title, message_path(message)) %><br>
-        <% end %>
-      </div>
+  <div class="row">
+    <div class="col-sm-12">
+
+<img src="https://ooo.0o0.ooo/2017/05/25/5926e849eb594.png" class="img-responsive" alt="内页banner copy.png" title="内页banner copy.png" />
 
 
   </div>
 </div>
+
+  <br><br>
+<div class="container-fluid ">
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 ">
+      <br>
+      <div class="new-index-title">
+      <h2>新闻中心</h2>
+      <p>NEWS CENTER</p>
+      </div>
+      <br><br>
+      <div class="btn-group btn-group-justified">
+
+        <a href="#" class="btn btn-default">公司新闻</a>
+        <a href="#" class="btn btn-default">媒体关注</a>
+        <a href="#" class="btn btn-default">行业资讯</a>
+        <a href="#" class="btn btn-default">通知公告</a>
+        <a href="#" class="btn btn-default">视频中心</a>
+      </div><br>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <!-- news index content -->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 dzl-newcontent">
+
+      <% @messages.each do |message| %>
+            <small><span class="glyphicon glyphicon-triangle-right"></span></small>
+            <%= link_to(message.title, message_path(message)) %>
+            <span class="pull-right">发表日期</span><br>
+        <% end %>
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <!-- news index content end -->
+
+
+
+</div>
+<!-- news index title end -->

@@ -1,33 +1,73 @@
 
 
-  <div class="row">
 
-    <div class="col-sm-3 ">
-      <div class="well msgsidebar">
-        <button type="button" class="btn btn-danger btn-block">新闻中心</button>
-        <br><br>
-        <img src="https://ooo.0o0.ooo/2017/05/22/5922986e27d54.png" alt="Snip20170522_2.png" title="Snip20170522_2.png" class="img-responsive" />
-        <br>
-        <img src="https://ooo.0o0.ooo/2017/05/22/5922988f72578.png" alt="Snip20170522_1.png" title="Snip20170522_1.png" class="img-responsive" />
-        <br><br><br><br><br><br>
-      </div>
-    </div>
+<!-- 大图 -->
+<div class="row">
+  <div class="col-sm-12">
 
-    <div class="col-sm-9 msgcontent">
+<img src="https://ooo.0o0.ooo/2017/05/25/5926e24b05f8d.png" class="img-responsive" alt="内页banner copy.png" title="内页banner copy.png" />    </div>
 
-      <div class="newscenter"> <strong>|</strong>  &nbsp;&nbsp;&nbsp;&nbsp;新闻中心 </div>
+</div>
+<!-- 大图 end -->
 
-      <br><br>
+<!-- newsbar -->
 
-        <!-- articles company start -->
-        <div style="text-align:center"><h4> <%= @message.title %> </h4></div>
-        <hr>
-        <p>
-          <%= raw @message.description %>
+<!-- <div class="row">
+  <div class="col-sm-2">1</div>
+  <div class="col-sm-8 dzl-newsbar">
+    新闻动态 - 酒业新闻
+  </div>
+  <div class="col-sm-2 ">3</div>
+</div> -->
 
-        </p>
-        <!-- articles company finish -->
-        <div style="text-align:right"><a href="#">返回目录</a></div>
-      </div>
+<!-- <div class="row">
+  <div class="col-sm-2">1</div>
+  <div class="col-sm-8 dzl-newsbar">
 
-      </div>
+    <ul class="dzl-newsbar-ul">
+      <li class="dzl-newsbar-li"><a class="active" href="#home">Home</a></li>
+      <li class="dzl-newsbar-li"><a href="#news">News</a></li>
+      <li class="dzl-newsbar-li"><a href="#contact">Contact</a></li>
+      <li class="dzl-newsbar-li"><a href="#about">About</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-2 ">3</div>
+</div> -->
+<div class="container-fluid ">
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8 dzl-newsbar-relative">
+    <br>
+    <p>新闻动态 - 酒业新闻</p><br>
+    <div class="btn-group btn-group-justified">
+
+      <a href="#" class="btn btn-default">公司新闻</a>
+      <a href="#" class="btn btn-default">媒体关注</a>
+      <a href="#" class="btn btn-default">行业资讯</a>
+      <a href="#" class="btn btn-default">通知公告</a>
+      <a href="#" class="btn btn-default">视频中心</a>
+    </div><br>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+</div>
+<!-- newsbar end -->
+<!-- news content -->
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8 dzl-newcontent">
+
+    <div style="text-align:center"><h4> <%= @message.title %> </h4></div>
+    <br>
+    <div style="text-align:center"><p>编辑：   发布时间：     阅读次数：</p></div>
+    <br><br>
+<p>
+ <%= raw @message.description %>
+
+</p>
+
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<!-- news content end -->
