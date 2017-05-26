@@ -60,7 +60,7 @@
 
     <div style="text-align:center"><h4> <%= @message.title %> </h4></div>
     <br>
-    <div style="text-align:center"><p>编辑：   发布时间：     阅读次数：</p></div>
+    <div style="text-align:center"><p>编辑：<%= @message.writer %>   发布时间：<%= @message.created_at.strftime("%Y-%m-%d") %>     阅读次数：<%= "#{@message.impressionist_count} 次" %></p></div>
     <br><br>
 <p>
  <%= raw @message.description %>
