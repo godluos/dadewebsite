@@ -4,7 +4,7 @@
 </script>
 
 <!-- 导航栏 -->
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">WebSiteName</a>
@@ -73,8 +73,598 @@
       <% end %>
     </ul>
   </div>
-</nav>
+</nav> -->
 <!-- 导航栏结束 -->
+<body class="  lang-en">
+  <div id="fb-root"></div>
+  <!-- <script>
+    (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+  </script> -->
+  <div class="search-wrap js-search">
+    <div class="search-header">
+      <div class="container">
+        <a class="search__close-btn" href="javascript:void(0)" onclick="searchClose()"><svg class="icon-svg " width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"><path d="M41 1L1 41m40 0L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-rule="evenodd"/> </a>
+        <div class="search-header__content">
+          <h3 class="search__title">Search on Actiu</h3>
+          <p class="search__subtitle js-search-subtitle">Start writing...</p>
+          <input class="search__input js-search-input" id="q" type="text" name="q" autocomplete="off" value="">
+          <input type="hidden" id="action_search" value="https://www.actiu.com/en/search/" />
+        </div>
+      </div>
+    </div>
+    <div class="search js-search-main">
+      <div class="search__container container">
+        <div class="search__results js-search-results">
+          <div class="search__results__summary">
+            <h4 class="search__results__title">Result of the search</h4>
+            <img class="search__loading loading animation-spin js-search-loading" src="https://www.actiu.com/images/icons/loading.svg" width="30" height="30" alt="Cargando...">
+            <p class="search__results__subtitle js-search-msg">
+              <!-- Mostrando <strong>3</strong> de <strong>3</strong> resultados encontrados -->
+            </p>
+          </div>
+          <div class="js-search-list">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-backdrop js-search-backdrop"></div>
+  <div class="main-wrap js-main-wrap">
+    <div class="main-header-wrap">
+      <header class="main-header js-main-header js-mmenu-fixed">
+        <div class="container main-header-container clearfix">
+          <a class="hamburger" href="#nav-mobile"><span></span></a>
+          <a class="main-header__logo" href="#"><img src="https://ooo.0o0.ooo/2017/05/21/5920ef4983002.png" alt="logozm.png" title="logozm.png" />
+          </a>
+          <nav class="main-nav">
+            <ul role="menu">
+              <li class="main-nav__item js-main-nav-item main-nav__item--muebles " role="menuitem"><!-- Add class is-active to change state -->
+                <a class="main-nav__link js-main-nav-link" href="#" data-subnav="muebles">
+                  <span class="main-nav__link__text">首页</span>
+                </a>
+              </li>
+              <li class="main-nav__item js-main-nav-item main-nav__item--proyectos " role="menuitem">
+                <a class="main-nav__link js-main-nav-link" href="#" data-subnav="proyectos">
+                  <span class="main-nav__link__text">公司介绍</span>
+                </a>
+              </li>
+              <li class="main-nav__item js-main-nav-item main-nav__item--recursos " role="menuitem">
+                <a class="main-nav__link js-main-nav-link" href="#" data-subnav="recursos">
+                  <span class="main-nav__link__text">新闻</span>
+                </a>
+              </li>
+              <li class="main-nav__item js-main-nav-item main-nav__item--empresa " role="menuitem">
+                <a class="main-nav__link js-main-nav-link" href="#" data-subnav="empresa">
+                  <span class="main-nav__link__text">产品动态</span>
+                </a>
+              </li>
+              <li class="main-nav__item js-main-nav-item main-nav__item--noticias " role="menuitem">
+                <a class="main-nav__link js-main-nav-link" href="https://baiyunbian.tmall.com/?spm=a220o.1000855.1997427721.d4918089.jXne5z" data-subnav="noticias">
+                  <span class="main-nav__link__text">天猫商城</span>
+                </a>
+              </li>
+              <li class="main-nav__item js-main-nav-item main-nav__item--noticias " role="menuitem">
+                <a class="main-nav__link js-main-nav-link" href="#" data-subnav="noticias">
+                  <span class="main-nav__link__text">联系我们</span>
+                </a>
+              </li>
+              <ul class="nav navbar-nav navbar-right">
+              <% if !current_admin %>
+            <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'),
+            new_admin_session_path) %></li>
+          <% else %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Hi!, <%= current_admin.email %>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                  <li>
+                    <%= link_to("Admin 选单", admin_products_path ) %>
+                  </li>
+                <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'),
+                destroy_admin_session_path, method: :delete) %> </li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+            </ul>
+          </nav>
+        </div>
+        <div class="main-subnav js-main-subnav">
+          <div class="main-subnav-section main-subnav-section--muebles
+           has-photo js-main-subnav-section js-main-subnav-section-muebles">
+            <div class="container">
+              <a class="main-subnav__title" href="#"><
+                Categorías
+              </a>
+              <div class="row">
+                <div class="main-subnav__muebles__col-left col-md-10">
+                  <ul class="main-subnav__nav clearfix">
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="/messages">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">新闻</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="/prodrcts">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">产品</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Meeting chairs</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Benches</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Soft seating</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Storage</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Reception Counters</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Library</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Auditorium seating</span>
+                      </a>
+                    </li>
+                    <li class="main-subnav__item main-subnav__item--small">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">Screens</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="main-subnav__muebles__col-right col-md-2">
+                  <ul class="main-subnav__nav clearfix">
+                    <li class="main-subnav__item">
+                      <a class="main-subnav__item__link" href="#">
+
+                        <div class="clearfix"></div>
+                        <span class="main-subnav__item__title">  Designers</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-subnav-section main-subnav-section--proyectos js-main-subnav-section js-main-subnav-section-proyectos"><!-- Add class is-active to change state -->
+            <div class="container">
+              <ul class="main-subnav__nav t-ext-center clearfix">
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Offices</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Auditoriums</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Institutional</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Health</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Education</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Terminals</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Canteen</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-subnav-section main-subnav-section--recursos has-photo js-main-subnav-section js-main-subnav-section-recursos"><!-- Add class is-active to change state -->
+            <div class="container">
+              <ul class="main-subnav__nav clearfix">
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Architecture</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Videos</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Downloads</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  <!-- Add class is-active to change state -->
+          <div class="main-subnav-section main-subnav-section--empresa js-main-subnav-section js-main-subnav-section-empresa">
+
+            <div class="container">
+              <ul class="main-subnav__nav clearfix">
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  get to know us</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Actiu DNA</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">Technology<br>park</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">
+                      campaigns</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">Showrooms</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">Employment</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-subnav-section main-subnav-section--noticias js-main-subnav-section js-main-subnav-section-noticias"><!-- Add class is-active to change state -->
+            <div class="container">
+              <ul class="main-subnav__nav clearfix">
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  News</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#">
+
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Appearance <br>
+                      en prensa</span>
+                  </a>
+                </li>
+                <li class="main-subnav__item">
+                  <a class="main-subnav__item__link" href="#" target="_blank">
+
+
+                    <div class="clearfix"></div>
+                    <span class="main-subnav__item__title">  Press Kit</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="search-mini  js-search-mini">
+          <div class="container">
+            <form class="search-mini__form" action="#" method="post" accept-charset="utf-8">
+              <input class="form-control search-mini__input js-search-mini-input" type="text" name="search_text" autocomplete="off" placeholder="Escribe aquí..." value="">
+              <button class="search-mini__submit" type="submit"><svg class="icon-svg " width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><title>Buscar</title><g transform="translate(-965 -33)" stroke-linecap="round" stroke-width="2" stroke-linejoin="round" fill="none" fill-rule="evenodd"><path d="M977.13 39.57c0 3.07-2.49 5.56-5.56 5.56-3.08 0-5.57-2.49-5.57-5.56 0-3.08 2.49-5.57 5.57-5.57 3.07 0 5.56 2.49 5.56 5.57zm-1.63 3.93L982 50l-6.5-6.5z"/></g> </button>
+              <input type="hidden" id="search_filter" name="search_filter" value="TODOS" />
+            </form>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="hidden">
+      <nav id="nav-mobile" class="main-nav-mobile">
+        <ul>
+          <li class="">
+            <a class="main-nav-mobile__title" href="#/">
+              Home
+            </a>
+          </li>
+          <li class=""><!-- mm-opened -->
+            <span class="main-nav-mobile__title">
+              Products
+            </span>
+            <ul class="main-nav-mobile___subnav" role="menu">
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Categorías
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Office chairs
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Desk systems
+                 </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="https://www.actiu.com/en/furniture/meeting-chairs">
+                  Meeting chairs
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Benches
+                 </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Soft seating
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Storage
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Reception Counters
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Library
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Auditorium seating
+                </a>
+              </li>
+              <li class="main-nav-mobile__sublink">
+                <a href="#">
+                  Screens
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Designers
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <span class="main-nav-mobile__title">
+              Case studies
+            </span>
+            <ul>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Offices
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Auditoriums
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Institutional
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Health
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Education
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Terminals
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Canteen
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <span class="main-nav-mobile__title">
+              Resources
+            </span>
+            <ul>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Architecture
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Videos
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Downloads
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <span class="main-nav-mobile__title">
+              Company
+            </span>
+            <ul>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Get to know us
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Actiu DNA
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Technology Park
+                 </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  campaigns
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Showroom
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Employment
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <span class="main-nav-mobile__title">
+              News
+            </span>
+            <ul>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  News
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#">
+                  Appearance in the press
+                </a>
+              </li>
+              <li>
+                <a class="main-nav-mobile__subtitle" href="#" target="_blank">
+                  Press Kit
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a class="main-nav-mobile__title" href="#">
+              Private area
+            </a>
+          </li>
+          <li class="">
+            <a class="main-nav-mobile__title" href="#">
+              Contact us
+            </a>
+          </li>
+          <li class="">
+            <a class="main-nav-mobile__title" href="#">
+              Newsletter
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
 <!-- 主体部分 -->
 <main class="main-container ">
@@ -124,7 +714,7 @@
         </div> -->
       </div>
     </div>
-  
+
 
   <!-- 主体之视频结束 -->
 
@@ -170,7 +760,7 @@
 
 
 
-   
+
       <div class="products-highlights">
         <div class="container">
           <h2 class="title text-left"><strong>推荐产品</strong></h2>
@@ -179,8 +769,8 @@
           </div>
         </div>
         <div class="carousel-products-wrap js-carousel-products home_product_destacados_actiu">
-          <span class="carousel-products-nav-prev hidden js-carousel-products-nav-prev"><svg class="icon-svg " width="29" height="75" viewBox="0 0 29 75" xmlns="http://www.w3.org/2000/svg"><path d="M27.284 2L3 38.284l23.254 34.744" stroke-width="4" fill="none" fill-rule="evenodd"/></svg></span>
-          <span class="carousel-products-nav-next hidden js-carousel-products-nav-next"><svg class="icon-svg " width="29" height="75" viewBox="0 0 29 75" xmlns="http://www.w3.org/2000/svg"><path d="M1.716 73.028L26 36.745 2.746 2" stroke-width="4" fill="none" fill-rule="evenodd"/></svg></span>
+          <span class="carousel-products-nav-prev hidden js-carousel-products-nav-prev"><svg class="icon-svg " width="29" height="75" viewBox="0 0 29 75" xmlns="http://www.w3.org/2000/svg"><path d="M27.284 2L3 38.284l23.254 34.744" stroke-width="4" fill="none" fill-rule="evenodd"/> </span>
+          <span class="carousel-products-nav-next hidden js-carousel-products-nav-next"><svg class="icon-svg " width="29" height="75" viewBox="0 0 29 75" xmlns="http://www.w3.org/2000/svg"><path d="M1.716 73.028L26 36.745 2.746 2" stroke-width="4" fill="none" fill-rule="evenodd"/> </span>
           <div class="carousel-products js-owl-carousel">
             <article class="carousel-products-item js-carousel-products-item">
               <a href="https://www.actiu.com/en/furniture/soft-seating/badminton">
